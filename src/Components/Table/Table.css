@@ -1,0 +1,178 @@
+.dataTable {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: spacing(3);
+  position:absolute;
+  overflow-x: auto;
+  white-space: wrap;
+}
+
+.scrolling-wrapper-flexbox {
+  background: white;
+  flex-grow: 1;
+  overflow: auto;
+   /* for Firefox */
+  min-height: 0;
+}
+
+.scrolling-wrapper-flexbox.card {
+  margin: 10px;
+  background: #BBDEFB;
+}
+
+.tableBoxScrollable {
+  width: 100%;
+  height: 100%;
+}
+.tableBoxScrollable :global(.simplebar-track.vertical) {
+  display: none !important;
+}
+.tableBoxScrollable :global(.simplebar-scroll-content) {
+  padding-right: 0 !important;
+  overflow-y: hidden;
+}
+.tableBoxScrollable :global(.simplebar-content) {
+  margin-right: 0 !important;
+  padding-right: 1px;
+}
+
+.header {
+  display: table-header-group;
+}
+.headerRow {
+  display: table-row;
+  color: tint(#102129, 40);
+}
+.headerCell {
+  display: table-cell;
+  padding: 8px 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.headerCellFixedRight {
+  padding: 12px 20px !important;
+}
+.headerIconWrapper {
+  display: flex;
+}
+
+.number {
+  text-align: right;
+}
+
+.sortable {
+  cursor: pointer;
+}
+.sortable svg {
+  fill: tint(tint(#102129, 58), 0.9);
+  height: 14px;
+}
+
+.up, .down {
+  color: #102129;
+  font-weight: 700;
+}
+.up svg, .down svg {
+  fill: #102129;
+}
+
+.body {
+  display: table-row-group;
+}
+
+.row {
+  display: table-row;
+  background-color: #FFF;
+  border: 1px solid shade(#F2F4F7, 13);
+}
+.row:nth-child(2n) {
+  background-color: #f3f8fd;
+}
+.row:hover {
+  background-color: tint(#3e96db, 85);
+}
+
+.cell {
+  display: table-cell;
+  position: relative;
+  padding: 0 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+  max-width: 250px;
+  height: 60px;
+}
+.cell .text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cell.fixedRight {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  background-color: white;
+  border-left: 1px solid shade(#F2F4F7, 13);
+  border-right: 1px solid shade(#F2F4F7, 13);
+  border-bottom: 1px solid shade(#F2F4F7, 13);
+  box-shadow: -2px 0px 2px shade(#F2F4F7, 3.5);
+  width: 42px;
+  min-height: 40px;
+  padding: 0;
+}
+.cell .legend {
+  font-size: 10px;
+  color: tint(#102129, 40);
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.active {
+  border-left: 8px solid #3e96db;
+}
+
+.placeholder {
+  border: 2px dashed shade(#F2F4F7, 13);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  padding: spacing(15) spacing(8);
+  text-align: center;
+  color: tint(#102129, 40);
+  margin-top: spacing(5);
+}
+
+.tableButton {
+  height: 36px;
+  width: 36px;
+  border-radius: 72px;
+  border: none;
+  padding: 0;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tableButton svg {
+  cursor: pointer;
+  vertical-align: middle;
+  fill: tint(#102129, 58);
+  transition: fill 0.3s ease;
+}
+
+.loadMore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: spacing(3);
+  margin-top: -spacing(10);
+}

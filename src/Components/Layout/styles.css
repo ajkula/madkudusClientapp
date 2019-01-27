@@ -1,0 +1,14 @@
+.contentWrapper {
+  border-top: 1px solid shade(#F2F4F7, 13);
+  margin-bottom: spacing(20);
+}
+
+.containerLimited {
+  padding: 0 spacing(4);
+  max-width: 1186px;
+  margin: 0 auto;
+}
+
+.listControl {
+  margin-top: spacing(4);
+}
